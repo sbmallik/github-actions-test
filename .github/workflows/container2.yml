@@ -7,17 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     services:
       app:
-        image: giltayar/myblog
+        image: alialaa17/node-api
         ports:
-          - 3000:3000
+          - 3001:3000
       mongo:
-        image: giltayar/mymongo
+        image: mongo
         ports:
           - 27017:27017
     steps:
+      - name: Checkout
+        uses: actions/checkout@master
       - name: Log node version
         run: |
           node -v
           cat /etc/os-release
       - name: Get users
-        run: curl http://localhost:3000
+        run: curl http://localhost:3001/api/users
