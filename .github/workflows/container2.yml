@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     services:
       app:
-        image: alialaa17/node-api
+        image: giltayar/myblog
         ports:
-          - 3001:3000
+          - 3000:3000
       mongo:
-        image: mongo:3.4
+        image: giltayar/mymongo
         ports:
           - 27017:27017
     steps:
@@ -20,4 +20,4 @@ jobs:
           node -v
           cat /etc/os-release
       - name: Get users
-        run: curl http://localhost:3001/api/users
+        run: curl http://localhost:3000
