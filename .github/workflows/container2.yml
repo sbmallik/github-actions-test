@@ -15,12 +15,6 @@ jobs:
         ports:
           - 27017:27017
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
-      - name: Log node version
-        run: |
-          node -v
-          cat /etc/os-release
       - name: Post a user
         run: "curl -X POST http://localhost:3001/api/user -H 'Content-Type: application/json' -d '{\"username\": \"hello\",\"address\": \"street_number_and_name\"}'"
       - name: Get users
