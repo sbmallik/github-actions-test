@@ -6,7 +6,8 @@ jobs:
   run-shell-command: 
     runs-on: ubuntu-latest
     env: 
-      WF_SECRETS: ${{ secrets.WF_SECRET }}
+      WF_SECRET: ${{ secrets.WF_SECRET }}
+      GITHUB_TOKEN: ${{ github.token }}
     steps:
       - name: echo a string
         run: echo "Hello world"
@@ -19,8 +20,8 @@ jobs:
           echo "GITHUB_SHA: ${GITHUB_SHA}"
           echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
           echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
-          echo "{{ github.token }}"
-          echo "WF_SECRET: ${WF_SECRETS}"
+          echo ${{ github.token }}
+          echo "WF_SECRET: ${WF_SECRET}"
       - name: python command
         run: |
           import platform
