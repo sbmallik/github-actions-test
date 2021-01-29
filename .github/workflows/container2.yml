@@ -11,7 +11,7 @@ jobs:
         ports:
           - 3001:3000
       mongo:
-        image: mymongo
+        image: mongo:3.4
         ports:
           - "27017:27017"
     steps:
