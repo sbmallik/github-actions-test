@@ -5,6 +5,8 @@ on: [push]
 jobs:
   run-shell-command: 
     runs-on: ubuntu-latest
+    env: 
+      WF_SECRETS: ${{ secrets.WF_SECRET }}
     steps:
       - name: echo a string
         run: echo "Hello world"
@@ -14,11 +16,11 @@ jobs:
           npm -v
       - name: Display env variables
         run: |
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
+          echo "GITHUB_SHA: ${GITHUB_SHA}"
+          echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+          echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
           echo "{{ github.token }}"
-          echo "{{ secrets.WF_SECRET }}"
+          echo "WF_SECRET: ${WF_SECRETS}"
       - name: python command
         run: |
           import platform
