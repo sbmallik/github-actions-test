@@ -1,4 +1,6 @@
-![](https://github.com/sbmallik/github-actions-test/workflows/container2/badge.svg?branch=master&event=push)
+<p align="center">
+  <a href="https://github.com/sbmallik/github-actions-test"><img alt="GitHub Actions status" src="https://github.com/sbmallik/github-actions-test/workflows/container2/badge.svg"></a>
+</p>
 
 # Github Actions Test
 
