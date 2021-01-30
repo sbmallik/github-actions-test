@@ -1,3 +1,5 @@
+![](https://github.com/sbmallik/github-actions-test/workflows/container2/badge.svg?branch=master&event=push)
+
 # Github Actions Test
 
 ***
