@@ -1,4 +1,4 @@
-![](https://github.com/sbmallik/github-actions-test/workflows/simple/badge.svg?event=push)
+![](https://github.com/sbmallik/github-actions-test/workflows/Check%20users/badge.svg?event=push)
 
 # Github Actions Test
 
