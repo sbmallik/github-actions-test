@@ -1,6 +1,4 @@
-<p align="center">
-  <a href="https://github.com/sbmallik/github-actions-test"><img alt="GitHub Actions status" src="https://github.com/sbmallik/github-actions-test/workflows/container2/badge.svg"></a>
-</p>
+![](https://github.com/sbmallik/github-actions-test/workflows/simple/badge.svg?event=push)
 
 # Github Actions Test
 
